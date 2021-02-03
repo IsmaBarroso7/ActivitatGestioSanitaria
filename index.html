@@ -21,12 +21,12 @@
 <body style="background-image: url('img/fondomadera.jpg');">
 
     <!-- INICI container -->
-    <div class="row">
+    <div class="row col-sm">
         <div class="offset-4">
             <h1>Aplicació gestió Sanitària</h1>
         </div>
     </div>
-    <div class="row">
+    <div class="row col-sm">
         <div class="offset-1">
             <h4>Panell de Gestió</h4>
         </div>
@@ -46,7 +46,7 @@
     <!-- mt margin top = 5 -->
     <!-- FINAL eleID_h4TitolPanell -->
 
-    <div class="row justify-content-center">
+    <div class="row justify-content-center col-sm">
         <div class="card" style="width:270px">
             <img class="card-img-top" src="img/hospitaal.jpg" alt="Card image">
             <div class="card-body" style="background-color:lightcoral;">
@@ -88,7 +88,7 @@
         </div>
     </div><br><br>
     </div>
-    <div class="row">
+    <div class="row col-sm">
         <div class="offset-2 col-12">
             <button type="button" class="btn btn-warning col-8" id="btnGestAplicacio">CONTROL</button>
         </div>
@@ -103,10 +103,63 @@
         <!-- ------------------------------------------------------------------------------------ -->
         <!-- INICI eleID_divPresentacio -->
         <div id="divPresentacio">
-            <div class="offset-1">
+            <div class="offset-1 col-sm">
             <!-- mt margin top = 8    mt margin bottom = 8 -->
             <h4>Benvigut a l'aplicació de gestió Sanitària</h4>
             <p>Amb els botons del panell lateral, podràs accedir a tots els menus!</p>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div id="demo" class="carousel slide d-none d-sm-block" data-ride="carousel">
+    
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                    <li data-target="#demo" data-slide-to="3"></li>
+                    <li data-target="#demo" data-slide-to="4"></li>
+                </ul>
+    
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item text-center active ">
+                        <a class="nav-link" href="img/virusparticles.jpg">
+                        <img src="img/virusparticles.jpg" alt="Los Angeles">
+                        </a>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <a class="nav-link">
+                        <img src="img/notas.jpg" alt="Chicago">
+                        </a>
+                    </div>
+                    <div class="carousel-item text-center ">
+                        <a class="nav-link">
+                        <img src="img/sitio.jpg" alt="New York">
+                        </a>
+                    </div>
+                    <div class="carousel-item text-center ">
+                        <a class="nav-link">
+                        <img src="img/pin.jpg" alt="New York">
+                    </a>
+                    </div>
+                    <div class="carousel-item text-center ">
+                        <a class="nav-link">
+                        <img src="img/medi.jpg" alt="New York">
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+    
             </div>
         </div>
 
