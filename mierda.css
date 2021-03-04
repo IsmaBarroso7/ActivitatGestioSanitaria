@@ -1,0 +1,13 @@
+﻿body {
+    padding: 25px;
+    font-size: 25px;
+ 
+    
+}
+.fondo {
+    background-image: url('img/fondomadera.jpg');
+}
+.oscu {
+    background-color: black;
+    color: white;
+}
