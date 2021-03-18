@@ -35,6 +35,24 @@
                 $('.hola').show();
 
             });
+            <!-- $('#btnGestAplicacio').hide(); -->
+            $('.shou').hide();
+            $('#control').hide();
+            $('#divpacients').hide();
+            $("#panell").click(function () {
+                $('.shou').toggle();
+
+            });
+            $("#pa").click(function () {
+                $('#divpacients').toggle();
+
+            });
+            $("#pa").click(function () {
+                $('#divPresentacio').hide();
+
+            });
+           
+          
         });
     </script>
 </head>
@@ -51,7 +69,18 @@
     </div>
     <div class="row col-sm">
         <div class="offset-1">
-            <h4>Panell de Gestió</h4>
+            <div>
+            <button class="btn btn-primary" id="panell">
+            <h4 >Panell de Gestió</h4>
+            
+        </div>
+        <button class="btn btn-primary shou"  >Hospital</button>
+        <br>
+        <button class="btn btn-primary shou" id="pa">Pacientes</button>
+        <br>
+        <button class="btn btn-primary shou" >Enfermedades</button><br>
+        <button class="btn btn-primary shou" >Medicos</button>
+        </button>
         </div>
     </div>
 
@@ -65,7 +94,10 @@
     <!-- mt margin top = 5 -->
     <!-- FINAL eleID_h4TitolPanell -->
 
-    <div class="row justify-content-center col-sm">
+
+    
+
+    <div class="row justify-content-center col-sm" hidden>
         <div class="card" style="width:270px">
             <img class="card-img-top" src="img/hospitaal.jpg" alt="Card image">
             <div class="card-body" style="background-color:lightcoral;">
@@ -118,11 +150,74 @@
     </div><br><br>
     </div>
     <div class="row col-sm">
-        <div class="offset-2 col-12">
+        <div class="offset-2 col-12 " id="control">
             <button type="button" class="btn btn-warning col-8" id="btnGestAplicacio">CONTROL</button>
         </div>
     </div>
+    <div class="container" >
 
+        <div  class="collapse">
+
+            <!-- FORMULARIO -->
+
+            <form class="container" action="js/index.php" method="get" id="pacient" >
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <!-- Full Name -->
+                        <label for="nom" class="control-label"><strong>Nombre</strong></label>
+                        <input type="text" class="form-control" id="nom" name="nom" placeholder="Nombre">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <!-- Full Name -->
+                        <label for="cognom" class="control-label"><strong>Apellido</strong></label>
+                        <input type="text" class="form-control" id="cognom" name="cognom" placeholder="Apellido">
+                    </div>
+
+
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="date"><strong>Data de naixement</strong></label>
+                        <input type="date" class="form-control" name="data" id="data">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="sexe" name="sexe"><strong>Sexe:</strong></label>
+                        <input type="radio" id="sex" name="sex" value="Home"> HOME
+                        <input type="radio" id="sex" name="sex" value="Dona"> DONA
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <strong><label for="opciones">Opcions</label></strong>
+                        <select id="opciones" name="opciones">
+                            <option value="cardio">Cardio</option>
+                            <option value="trauma">Trauma</option>
+                            <option value="psico">Psico</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <label for="consentiment">
+                            <strong>
+                                Permitir enviar información
+                            </strong>
+                        </label>
+                        <input type="checkbox" id="consentiment" name="consentiment" value="Si">
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+
+        </div>
     <!-- FINAL COLUMNA 1 >md 02 < -- > bloc control equerre -->
     <br>
     <!-- ==================================================================================== -->
@@ -195,76 +290,64 @@
             </div>
         </div>
 
-        <div class="container">
-            <h2>Registrar</h2>
-            <p>Click en el boton para crear cuenta...</p>
-            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">
-                Registrar
-            </button>
-            <div id="demo" class="collapse">
 
-                <!-- FORMULARIO -->
+        </div>
+        <form class="container" action="js/index.php" method="get" id="divpacients" >
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <!-- Full Name -->
+                    <label for="nom" class="control-label"><strong>Nombre</strong></label>
+                    <input type="text" class="form-control" id="nom" name="nom" placeholder="Nombre">
+                </div>
 
-                <form class="container" action="js/index.php" method="get">
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <!-- Full Name -->
-                            <label for="nom" class="control-label"><strong>Nombre</strong></label>
-                            <input type="text" class="form-control" id="nom" name="nom" placeholder="Nombre">
-                        </div>
+                <div class="form-group col-md-6">
+                    <!-- Full Name -->
+                    <label for="cognom" class="control-label"><strong>Apellido</strong></label>
+                    <input type="text" class="form-control" id="cognom" name="cognom" placeholder="Apellido">
+                </div>
 
-                        <div class="form-group col-md-6">
-                            <!-- Full Name -->
-                            <label for="cognom" class="control-label"><strong>Apellido</strong></label>
-                            <input type="text" class="form-control" id="cognom" name="cognom" placeholder="Apellido">
-                        </div>
-
-
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="date"><strong>Data de naixement</strong></label>
-                            <input type="date" class="form-control" name="data" id="data">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="sexe" name="sexe"><strong>Sexe:</strong></label>
-                            <input type="radio" id="sex" name="sex" value="Home"> HOME
-                            <input type="radio" id="sex" name="sex" value="Dona"> DONA
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <strong><label for="opciones">Opcions</label></strong>
-                            <select id="opciones" name="opciones">
-                                <option value="cardio">Cardio</option>
-                                <option value="trauma">Trauma</option>
-                                <option value="psico">Psico</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-check">
-                            <label for="consentiment">
-                                <strong>
-                                    Permitir enviar información
-                                </strong>
-                            </label>
-                            <input type="checkbox" id="consentiment" name="consentiment" value="Si">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <input type="submit" value="Enviar">
-                    </div>
-                </form>
 
             </div>
 
-        </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="date"><strong>Data de naixement</strong></label>
+                    <input type="date" class="form-control" name="data" id="data">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="sexe" name="sexe"><strong>Sexe:</strong></label>
+                    <input type="radio" id="sex" name="sex" value="Home"> HOME
+                    <input type="radio" id="sex" name="sex" value="Dona"> DONA
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <strong><label for="opciones">Opcions</label></strong>
+                    <select id="opciones" name="opciones">
+                        <option value="cardio">Cardio</option>
+                        <option value="trauma">Trauma</option>
+                        <option value="psico">Psico</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <label for="consentiment">
+                        <strong>
+                            Permitir enviar información
+                        </strong>
+                    </label>
+                    <input type="checkbox" id="consentiment" name="consentiment" value="Si">
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
 
 </body>
 
